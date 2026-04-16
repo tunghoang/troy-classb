@@ -1,4 +1,4 @@
 <?php
-  $name = "Bill Gates"
+  $name = "Bill Gates";
   echo("Hello world! " . $name);
 ?>
