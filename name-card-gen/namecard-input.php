@@ -32,7 +32,7 @@
 
     <h2>Input information</h2>
     
-    <form method="get">
+    <form action='namecard-build.php' method="get">
         <!-- Name Field -->
         <div>
             <label for="name">Full Name:</label>
