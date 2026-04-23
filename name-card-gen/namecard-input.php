@@ -32,7 +32,7 @@
 
     <h2>Input information</h2>
     
-    <form action='namecard-build.php' method="get">
+    <form action='namecard-build.php' method="post">
         <!-- Name Field -->
         <div>
             <label for="name">Full Name:</label>
@@ -42,7 +42,7 @@
         <!-- Age Field -->
         <div>
             <label for="age">Age:</label>
-            <input type="number" id="age" name="tuoi" min="0" max="120">
+            <input type="number" id="age" name="age" min="0" max="120">
         </div>
 
         <!-- Sex/Gender Field -->
