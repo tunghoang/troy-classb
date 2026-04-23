@@ -53,7 +53,9 @@
     </style>
 </head>
 <body>
-    <div><a href="namecard-input.php">Back</a></div>
+    <div style="position: absolute; top: 5px; left: 10px;">
+      <a href="namecard-input.php">Back</a>
+    </div>
     <div class="card">
         <div class="name"><?= $name ?></div>
         
