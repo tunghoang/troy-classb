@@ -1,4 +1,5 @@
 <?php
-  $name = "Bill Gates";
-  echo("Hello world! " . $name);
+  $name = "BillGates";
+  $hashed = password_hash($name, PASSWORD_DEFAULT);
+  echo $hashed, strlen($hashed);
 ?>

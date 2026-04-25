@@ -13,7 +13,21 @@
 </head>
 <body>
     <?php 
-        print("PHP executed!");
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            // Open database connection
+            $conn = mysqli_connect("127.0.0.1", "admin", "Abc123", "socialnetB");
+            $username = $_POST['username'];
+            $fullname = $_POST['fullname'];
+            $hashed_password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+            $sql_stmt = "INSERT INTO account (username, fullname, password, description) VALUES ('" . $username . "', '" . $fullname . "', '".$hashed_password."', 'Hello guys!')";
+            $ret = mysqli_query($conn, $sql_stmt);
+            if ($ret) {
+                print('New user inserted');
+            }
+            else {
+                print("ERROR!!! PANIC!!!");
+            }
+        }
     ?>
     <h2>User Registration</h2>
     <form action="newuser.php" method="POST">
